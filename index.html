@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="so">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ElectroShop — Dukaan Elektronig</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>ElectroShop</h1>
+      <p class="tag">Laptops • Mobiles • Accessories</p>
+    </div>
+
+    <div class="controls">
+      <input id="search" type="search" placeholder="Raadi: laptop, phone..." />
+      <select id="category">
+        <option value="all">Dhamaan</option>
+        <option value="laptop">Laptops</option>
+        <option value="phone">Mobiles</option>
+        <option value="accessory">Accessories</option>
+      </select>
+
+      <button id="cart-toggle" class="cart-btn">🛒 <span id="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="products" id="products">
+      <!-- JS ayaa halkan buuxin doona -->
+    </section>
+
+    <aside class="cart-panel" id="cart-panel" aria-hidden="true">
+      <h2>Gaadhigaaga</h2>
+      <ul id="cart-list"></ul>
+      <p class="cart-total">Wadar: $<span id="total">0.00</span></p>
+      <div class="cart-actions">
+        <button id="clear-cart" class="btn danger">Nadiifi</button>
+        <button id="checkout" class="btn primary">Bixi (Simulate)</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Product Modal -->
+  <div id="product-modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close">&times;</button>
+      <img id="modal-img" alt="Product image">
+      <div class="modal-body">
+        <h3 id="modal-name"></h3>
+        <p id="modal-desc"></p>
+        <p class="price">$<span id="modal-price"></span></p>
+        <div class="qty-row">
+          <label for="modal-qty">Tirada:</label>
+          <input id="modal-qty" type="number" min="1" value="1">
+        </div>
+        <button id="modal-add" class="btn primary">Gali Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> ElectroShop — All rights reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
